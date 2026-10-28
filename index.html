@@ -183,79 +183,114 @@ const WATCHLIST = {
 };
 
 const BRIEF = {
-  mode: "sample",
-  asOf: "2026-10-16",
-  retrievedAt: "2026-10-16T16:30:00-04:00",
-  priceType: "close",
+  mode: "live",
+  asOf: "2026-10-28",
+  retrievedAt: "2026-10-28T12:55:00-04:00",
+  priceType: "intraday",
   companies: {
     NVDA: {
       closes: [
-        { date: "2026-10-12", close: 100.00 },
-        { date: "2026-10-13", close: 101.40 },
-        { date: "2026-10-14", close: 99.80 },
-        { date: "2026-10-15", close: 103.10 },
-        { date: "2026-10-16", close: 104.20 }
+        { date: "2026-10-20", close: 216.47, source: "https://finance.yahoo.com/quote/NVDA/history/" },
+        { date: "2026-10-21", close: 221.97 },
+        { date: "2026-10-22", close: 212.21 },
+        { date: "2026-10-23", close: 210.96 },
+        { date: "2026-10-26", close: 216.00 },
+        { date: "2026-10-27", close: 217.94 }
       ],
-      latest: null,
-      priceSource: "https://example.com/sample",
+      latest: { date: "2026-10-28", time: "12:51 PM", price: 217.18 },
+      priceSource: "https://stockanalysis.com/stocks/nvda/history/",
       news: [
-        { date: "2026-10-15", headline: "Sample headline. Run the refresh-brief agent to replace this.", source: "Sample", url: "https://example.com/sample", why: "Sample. The agent writes one plain sentence here on why the item matters to the stock." }
-      ],
-      upcoming: [
-        { date: "2026-10-28", event: "Sample event (replace by refreshing)", source: "Sample", url: "https://example.com/sample" }
-      ]
-    },
-    JPM: {
-      closes: [
-        { date: "2026-10-12", close: 100.00 },
-        { date: "2026-10-13", close: 99.30 },
-        { date: "2026-10-14", close: 98.90 },
-        { date: "2026-10-15", close: 98.20 },
-        { date: "2026-10-16", close: 97.60 }
-      ],
-      latest: null,
-      priceSource: "https://example.com/sample",
-      news: [
-        { date: "2026-10-14", headline: "Sample headline. Run the refresh-brief agent to replace this.", source: "Sample", url: "https://example.com/sample", why: "Sample." }
+        { date: "2026-10-27", headline: "NVIDIA and Oracle Expand NVIDIA Vera Rubin to Multi-Gigawatt Scale and Bring NVIDIA Vera CPU to Oracle Cloud Infrastructure", source: "NVIDIA Newsroom", url: "https://nvidianews.nvidia.com/news/nvidia-and-oracle-expand-nvidia-vera-rubin-to-multi-gigawatt-scale-and-bring-nvidia-vera-cpu-to-oracle-cloud-infrastructure", why: "A large cloud customer is scaling up its use of NVIDIA's newest systems, which supports demand for its AI hardware." },
+        { date: "2026-10-26", headline: "NVIDIA and Meta to Expand Collaboration on Muse and Muse Family of Models Amid Robust Growth", source: "NVIDIA Newsroom", url: "https://nvidianews.nvidia.com/news/nvidia-and-meta-to-expand-collaboration-on-muse-and-muse-family-of-models-amid-robust-growth", why: "Meta will use more NVIDIA infrastructure, and NVIDIA is committing $3 billion to Meta's equity offering, tying the two companies closer." }
       ],
       upcoming: []
     },
+    JPM: {
+      closes: [
+        { date: "2026-10-20", close: 335.26, source: "https://finance.yahoo.com/quote/JPM/history/" },
+        { date: "2026-10-21", close: 335.19 },
+        { date: "2026-10-22", close: 336.54 },
+        { date: "2026-10-23", close: 331.58 },
+        { date: "2026-10-26", close: 334.04 },
+        { date: "2026-10-27", close: 335.79 }
+      ],
+      latest: { date: "2026-10-28", time: "12:51 PM", price: 340.25 },
+      priceSource: "https://stockanalysis.com/stocks/jpm/history/",
+      news: [
+        { date: "2026-10-21", headline: "Jamie Dimon spent years warning about America's reliance on China. A year in, JPMorgan has put $230 billion behind fixing it", source: "Fortune", url: "https://fortune.com/2026/10/21/jamie-dimon-jpmorgan-china-critical-minerals-defense/", why: "The bank says it has financed $230 billion toward critical minerals, defense, and frontier tech, a growing lending and investing area for it." }
+      ],
+      upcoming: [
+        { date: "2026-10-28", event: "FOMC meeting concludes (Oct 27-28); rate decision is the market-wide event this week. Rates drive bank earnings.", source: "Federal Reserve", url: "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm" }
+      ]
+    },
     ACN: {
       closes: [
-        { date: "2026-10-12", close: 100.00 },
-        { date: "2026-10-13", close: 100.20 },
-        { date: "2026-10-14", close: 99.90 },
-        { date: "2026-10-15", close: 100.10 },
-        { date: "2026-10-16", close: 100.05 }
+        { date: "2026-10-20", close: 239.12, source: "https://finance.yahoo.com/quote/ACN/history/" },
+        { date: "2026-10-21", close: 240.26 },
+        { date: "2026-10-22", close: 258.74 },
+        { date: "2026-10-23", close: 249.37 },
+        { date: "2026-10-26", close: 247.23 },
+        { date: "2026-10-27", close: 235.16 }
       ],
-      latest: null,
-      priceSource: "https://example.com/sample",
+      latest: { date: "2026-10-28", time: "12:51 PM", price: 244.71 },
+      priceSource: "https://stockanalysis.com/stocks/acn/history/",
+      news: [],
+      upcoming: []
+    },
+    HLI: {
+      closes: [
+        { date: "2026-10-20", close: 130.33, source: "https://finance.yahoo.com/quote/HLI/history/" },
+        { date: "2026-10-21", close: 128.39 },
+        { date: "2026-10-22", close: 133.24 },
+        { date: "2026-10-23", close: 131.31 },
+        { date: "2026-10-26", close: 131.21 },
+        { date: "2026-10-27", close: 132.35 }
+      ],
+      latest: { date: "2026-10-28", time: "12:48 PM", price: 135.45 },
+      priceSource: "https://stockanalysis.com/stocks/hli/history/",
       news: [],
       upcoming: [
-        { date: "2026-10-22", event: "Sample event (replace by refreshing)", source: "Sample", url: "https://example.com/sample" }
+        { date: "2026-10-28", event: "Second quarter fiscal 2027 results, after the NYSE close; conference call at 5:00 PM ET", source: "Houlihan Lokey (via Finviz)", url: "https://finviz.com/news/400062/houlihan-lokey-announces-release-date-for-second-quarter-results-for-fiscal-year-2027" }
       ]
     },
     LLY: {
       closes: [
-        { date: "2026-10-12", close: 100.00 },
-        { date: "2026-10-13", close: 98.70 },
-        { date: "2026-10-14", close: 99.60 },
-        { date: "2026-10-15", close: 101.30 },
-        { date: "2026-10-16", close: 102.90 }
+        { date: "2026-10-20", close: 1283.66, source: "https://finance.yahoo.com/quote/LLY/history/" },
+        { date: "2026-10-21", close: 1270.75 },
+        { date: "2026-10-22", close: 1306.69 },
+        { date: "2026-10-23", close: 1273.46 },
+        { date: "2026-10-26", close: 1279.14 },
+        { date: "2026-10-27", close: 1281.91 }
       ],
-      latest: null,
-      priceSource: "https://example.com/sample",
+      latest: { date: "2026-10-28", time: "12:51 PM", price: 1287.24 },
+      priceSource: "https://stockanalysis.com/stocks/lly/history/",
       news: [
-        { date: "2026-10-16", headline: "Sample headline. Run the refresh-brief agent to replace this.", source: "Sample", url: "https://example.com/sample", why: "Sample." }
+        { date: "2026-10-28", headline: "Lilly's retatrutide delivered greater A1C reduction and more than double the weight loss of Ozempic's highest approved dose in head-to-head trial", source: "BioSpace (Lilly press release)", url: "https://www.biospace.com/press-releases/lillys-retatrutide-delivered-greater-a1c-reduction-and-more-than-double-the-weight-loss-of-ozempics-highest-approved-dose-in-head-to-head-trial", why: "A Phase 3 head-to-head win over Novo's Ozempic supports Lilly's next obesity and diabetes drug, which is not yet approved." }
       ],
       upcoming: [
-        { date: "2026-10-30", event: "Sample event (replace by refreshing)", source: "Sample", url: "https://example.com/sample" }
+        { date: "2026-10-29", event: "Third-quarter 2026 financial results; conference call at 10:00 AM ET", source: "Lilly (via Finviz)", url: "https://finviz.com/news/403165/lilly-confirms-date-and-conference-call-for-third-quarter-2026-financial-results-announcement" }
       ]
     }
   }
 };
 
 const CHANGELOG = [
+  {
+    date: "2026-10-28",
+    summary: [
+      "NVDA 221.97 to 217.18 (-2.2%) on Oracle and Meta expanding NVIDIA deployments (intraday 12:51 PM ET)",
+      "JPM 335.19 to 340.25 (+1.5%) on the bank's $230 billion security and resiliency financing update (intraday 12:51 PM ET)",
+      "ACN 240.26 to 244.71 (+1.9%), no major news found (intraday 12:51 PM ET)",
+      "HLI 128.39 to 135.45 (+5.5%), no major news found; reports earnings after the close today (intraday 12:48 PM ET)",
+      "LLY 1270.75 to 1287.24 (+1.3%) on Phase 3 retatrutide head-to-head win over Ozempic (intraday 12:51 PM ET)",
+      "Calendar added: HLI Q2 FY27 results Oct 28, LLY Q3 results Oct 29, FOMC decision Oct 28 (under JPM).",
+      "Missing: no news items found for ACN or HLI in the last seven days; NVDA and JPM news is thin (two and one items).",
+      "Missing: no confirmed upcoming events for NVDA (Q3 FY27 earnings date not found), JPM, or ACN.",
+      "Added HLI to the data; the previous sample data had no HLI entry.",
+      "Prices are the last five completed closes (Oct 21 to Oct 27) plus an intraday price for Oct 28, all from stockanalysis.com."
+    ],
+    note: "Verify first: (1) ACN and HLI have no news, check manually. (2) Calendar dates for HLI and LLY come from Finviz copies of company releases, not the IR pages (those blocked or did not load); one search snippet listed HLI at Oct 29, which conflicts with the Oct 28 release. (3) The FOMC item is dated Oct 28 as the last day of the Oct 27-28 meeting; the Fed page shows meeting days only, not the decision time. Intraday prices will change by the close."
+  },
   {
     date: "2026-10-16",
     summary: [
@@ -314,9 +349,11 @@ function series(c) {
   return pts;
 }
 function weekChange(c) {
-  const pts = series(c);
-  if (pts.length < 2 || !pts[0]) return null;
-  return (pts[pts.length - 1] - pts[0]) / pts[0];
+  const cl = c.closes.map(x => x.close);
+  if (cl.length < 2) return null;
+  const base = cl.length >= 6 ? cl[cl.length - 6] : cl[0];
+  if (!base) return null;
+  return (cl[cl.length - 1] - base) / base;
 }
 function dirClass(ch) {
   if (ch === null || Math.abs(ch) < 0.0005) return "flat";

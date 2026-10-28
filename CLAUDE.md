@@ -3,7 +3,7 @@
 ## What this is
 
 A single-page "Monday morning brief" for a small stock watchlist, published on GitHub Pages
-and refreshed by an agent. For each company it shows the last five trading days as a
+and refreshed by an agent. For each company it shows the last six closes as a
 sparkline, the week's move, what happened in the news in the last seven days, and what is
 on the calendar for the next two weeks (earnings, product events, Fed decisions, and so on).
 

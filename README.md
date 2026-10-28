@@ -15,7 +15,7 @@ Open the folder in VS Code, open the Claude Code panel, and send one sentence:
 
 > Use the refresh-brief agent. Refresh the brief for today.
 
-The agent looks up each ticker's last five closes, the last seven days of news, and the next
+The agent looks up each ticker's last six closes, the last seven days of news, and the next
 two weeks of scheduled events, writes them into `BRIEF`, adds a dated entry to `CHANGELOG`,
 and runs the QA review. You check the numbers against a source you trust (`EVAL.md` tells
 you how), then commit and sync from the Source Control panel.

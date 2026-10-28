@@ -50,7 +50,7 @@ const BRIEF = {
   priceType: "close",      // "close" or "intraday"
   companies: {
     NVDA: {
-      closes: [ { date: "2026-10-13", close: 100.00 }, /* five trading days, oldest first */ ],
+      closes: [ { date: "2026-10-13", close: 100.00 }, /* six trading days, oldest first */ ],
       latest: null,        // { date, time, price } when priceType is "intraday", else null
       priceSource: "https://...",
       news: [ { date: "2026-10-15", headline: "...", source: "Reuters", url: "https://...", why: "..." } ],
@@ -66,9 +66,10 @@ const CHANGELOG = [
 
 Rules the code enforces:
 
-- Weekly change is `(last - first) / first` over the `closes` array, using `latest.price`
-  as `last` when present. Never typed by hand.
-- Missing data is allowed everywhere: `closes` may be shorter than five, `latest` may be
+- Weekly change is the last close versus the close five trading days earlier (the sixth
+  from the end of `closes`, or the first close when fewer than six exist). It never uses
+  `latest.price`. Never typed by hand.
+- Missing data is allowed everywhere: `closes` may be shorter than six, `latest` may be
   `null`, `news` and `upcoming` may be empty, a ticker may be in `WATCHLIST` with no entry
   in `BRIEF.companies`. The page says what is missing in plain words.
 - Dates are formatted by the page from ISO strings. Do not type formatted dates in data.

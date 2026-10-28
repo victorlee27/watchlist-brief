@@ -20,7 +20,7 @@ Structure
 
 Data integrity
 4. Every ticker in `WATCHLIST.tickers` has a `symbol`, `name`, `exchange`, and `why`.
-5. For every company in `BRIEF.companies`: `closes` is an array of at most five objects with
+5. For every company in `BRIEF.companies`: `closes` is an array of at most six objects with
    ISO `date` and numeric `close`, oldest first, dates strictly increasing; `latest` is
    `null` or an object with `date`, `time`, and numeric `price`; `priceSource` is an https URL.
 6. `BRIEF.priceType` is `"close"` when every `latest` is null and `"intraday"` otherwise.

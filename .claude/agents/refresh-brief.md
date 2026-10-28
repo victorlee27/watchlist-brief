@@ -1,6 +1,6 @@
 ---
 name: refresh-brief
-description: Refreshes the watchlist brief in index.html with the last five closes, the last seven days of news, and the next two weeks of scheduled events for every ticker in WATCHLIST, then adds a dated CHANGELOG entry and runs the QA review. Use when asked to refresh, update, or roll forward the brief.
+description: Refreshes the watchlist brief in index.html with the last six closes, the last seven days of news, and the next two weeks of scheduled events for every ticker in WATCHLIST, then adds a dated CHANGELOG entry and runs the QA review. Use when asked to refresh, update, or roll forward the brief.
 tools: Read, Edit, Grep, Glob, WebSearch, WebFetch, Task
 ---
 

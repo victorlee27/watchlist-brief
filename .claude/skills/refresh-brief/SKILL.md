@@ -21,7 +21,7 @@ an honest note is fine.
 
 For each entry in `WATCHLIST.tickers`:
 
-1. Get the last five completed trading days of closing prices, oldest first. Preferred
+1. Get the last six completed trading days of closing prices, oldest first. Preferred
    sources, in order; stop at the first that works:
    - `https://stockanalysis.com/stocks/TICKER/history/` (lower-case ticker, fetch the page)
    - `https://www.google.com/finance/quote/TICKER:EXCHANGE`
@@ -32,7 +32,7 @@ For each entry in `WATCHLIST.tickers`:
    `BRIEF.priceType = "intraday"`. If the market is closed, set `latest: null` and
    `BRIEF.priceType = "close"`.
 3. Record the URL you actually used as `priceSource`. Record prices to two decimals.
-4. If you cannot get all five closes, record the ones you have (never pad, never estimate)
+4. If you cannot get all six closes, record the ones you have (never pad, never estimate)
    and write a line in the changelog entry saying which days are missing and why.
 
 Never compute the weekly change. The page does that.
