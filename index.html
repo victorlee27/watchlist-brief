@@ -93,6 +93,9 @@ section { margin-bottom: 2rem; }
 .cal .t { font-weight: 700; color: var(--navy); }
 .cal .src { color: var(--muted); font-size: .85rem; }
 
+/* Tap targets: links are at least 44px tall */
+.tape .sym a, .items .h a, .items a.src, .cal .src a, footer #repo a { display: inline-flex; align-items: center; min-height: 44px; }
+
 /* Changelog */
 .log { list-style: none; margin: 0; padding: 0; }
 .log li { background: var(--panel); border-radius: var(--radius); padding: .8rem .95rem; margin-bottom: .7rem; }
@@ -167,14 +170,14 @@ footer p { margin: .2rem 0; }
 /* ===== DATA. The refresh-brief agent edits BRIEF and CHANGELOG only. ===== */
 
 const WATCHLIST = {
-  owner: "Your Name",
+  owner: "Victor Lee",
   club: "SIBC",
   repo: "",
   tickers: [
     { symbol: "NVDA", name: "NVIDIA", exchange: "NASDAQ", why: "The AI capex cycle in one ticker. If this moves, the whole list moves." },
     { symbol: "JPM",  name: "JPMorgan Chase", exchange: "NYSE", why: "The bank every banking recruit should be able to talk about for five minutes." },
     { symbol: "ACN",  name: "Accenture", exchange: "NYSE", why: "The consulting bellwether. Its bookings tell you how clients feel about spending." },
-    { symbol: "DE",   name: "Deere", exchange: "NYSE", why: "Midwest industrial. Farm income, tariffs, and rates all show up here." },
+    { symbol: "HLI",  name: "Houlihan Lokey", exchange: "NYSE", why: "A pure-play investment bank. M&A, restructuring, and capital markets activity show up in its results." },
     { symbol: "LLY",  name: "Eli Lilly", exchange: "NYSE", why: "Indiana's largest company and the GLP-1 story." }
   ]
 };
@@ -231,21 +234,6 @@ const BRIEF = {
       upcoming: [
         { date: "2026-10-22", event: "Sample event (replace by refreshing)", source: "Sample", url: "https://example.com/sample" }
       ]
-    },
-    DE: {
-      closes: [
-        { date: "2026-10-12", close: 100.00 },
-        { date: "2026-10-13", close: 102.50 },
-        { date: "2026-10-14", close: 101.80 },
-        { date: "2026-10-15", close: 103.90 },
-        { date: "2026-10-16", close: 102.70 }
-      ],
-      latest: null,
-      priceSource: "https://example.com/sample",
-      news: [
-        { date: "2026-10-13", headline: "Sample headline. Run the refresh-brief agent to replace this.", source: "Sample", url: "https://example.com/sample", why: "Sample." }
-      ],
-      upcoming: []
     },
     LLY: {
       closes: [
